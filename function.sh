@@ -688,7 +688,7 @@ _Install_libx265() {
   pushd ${SOURCE_DIR}/src > /dev/null
   echo -e "${CBLUE} Install ${name} ${CEND}";
   [[ -d "x265" ]] && rm -rf "x265";
-  hg clone http://hg.videolan.org/x265
+  git clone https://github.com/videolan/x265.git
   cd x265/build/linux
   cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DENABLE_SHARED:bool=ON ../../source
   make
