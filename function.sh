@@ -531,7 +531,7 @@ _Install_libkvazaar() {
   echo -e "${CBLUE} Install ${name} ${CEND}";
   [[ -d "kvazaar" ]] && rm -rf "kvazaar";
   git clone --depth 1 https://github.com/ultravideo/kvazaar.git
-  cd kvazaarfz
+  cd kvazaar
   ./autogen.sh
   ./configure --prefix=${INSTALL_DIR} --bindir=${INSTALL_DIR}/bin
   make
