@@ -674,7 +674,10 @@ _Install_libx264() {
    else
     ARCHOPTS=""
   fi
-  git clone https://code.videolan.org/videolan/x264.git
+  #git clone https://code.videolan.org/videolan/x264.git
+  wget https://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20180402-2245-stable.tar.bz2
+  tar -xvzf x264-snapshot-20180402-2245-stable.tar.bz2
+  cd x264-snapshot-20180402-2245-stable
   cd x264
   ./configure --prefix=${INSTALL_DIR} --bindir=${INSTALL_DIR}/bin --enable-static $ARCHOPTS
   make
